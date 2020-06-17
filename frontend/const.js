@@ -1,0 +1,9 @@
+export const ACTIONS = {
+  ERROR: -1,
+  JOINING_ROOM: 0,
+  START_GAME: 1,
+  MAKING_MOVE: 2,
+  ANNOUNCING_WINNER: 3,
+  REMOVE_ROOM: 4,
+  RESTART_GAME: 5,
+};
