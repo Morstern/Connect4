@@ -1,11 +1,11 @@
 const encapsulateMessage = (...args) => {
   return args.reduce((total, arg) => {
-    return total + ':' + arg;
+    return total + ":" + arg;
   });
 };
 
 const decapsulateMessage = (string) => {
-  return string.split(':');
+  return string.split(":");
 };
 
-module.exports = {encapsulateMessage, decapsulateMessage};
+module.exports = { encapsulateMessage, decapsulateMessage };

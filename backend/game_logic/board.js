@@ -2,15 +2,18 @@ const createBoard = () => {
   return Array.from(Array(7), () => new Array(6).fill(-1));
 };
 
-const addToBoard = (board, column, playerIndex) => {
+function* addToBoard(board, column, playerIndex) {
+  var row;
   for (var i = board[column].length - 1; i >= 0; i--) {
     if (board[column][i] == -1) {
       board[column][i] = playerIndex;
+      row = i;
       break;
     }
   }
-  return board;
-};
+  yield board;
+  yield { column: column, row: row };
+}
 
 const rotateBoard = (board) => {
   var rows = [];
@@ -44,6 +47,12 @@ const validMove = (board, column) => {
   }
   return board[column][0] == -1;
 };
+const displayBoard = (board) => {
+  for (var i = 0; i < board.length; i++) {
+    console.log(...board[i]);
+    console.log("\n");
+  }
+};
 
 module.exports = {
   createBoard,
@@ -51,4 +60,5 @@ module.exports = {
   rotateBoard,
   checkHowDeep,
   validMove,
+  displayBoard,
 };
