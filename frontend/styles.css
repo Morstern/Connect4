@@ -34,6 +34,14 @@ body {
   background-color: blue;
 }
 
+#player_1 {
+  color: red;
+}
+
+#player_2 {
+  color: blue;
+}
+
 .message--options {
   background-color: grey;
 }
