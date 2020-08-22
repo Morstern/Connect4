@@ -1,4 +1,4 @@
-const {createBoard} = require('../game_logic/board');
+const { createBoard } = require("../game_logic/board");
 
 module.exports = class Room {
   constructor(roomId, playerObject) {
@@ -6,6 +6,9 @@ module.exports = class Room {
     this.players = [playerObject];
     this.board = createBoard();
     this.lastMove = null;
+    this.lastMovePosition = null;
     this.playersTurn = -1;
+    this.hasFinished = false;
+    this.hasStarted = false;
   }
 };

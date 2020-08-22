@@ -1,0 +1,102 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: grey;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+#message {
+  display: flex;
+  flex: 1 0 70px;
+  place-items: center;
+  justify-content: center;
+  font-size: 400%;
+  position: sticky;
+  top: 0;
+}
+
+.message--player_1 {
+  background-color: red;
+}
+
+.message--player_2 {
+  background-color: blue;
+}
+
+.message--options {
+  background-color: grey;
+}
+
+.content {
+  flex: 8 0 0;
+}
+
+#options {
+  height: 100%;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nickname {
+  padding: 15px;
+  margin: 15px;
+}
+
+#room {
+  height: 100%;
+  display: none;
+}
+
+.button {
+  display: inline-block;
+  background-color: black;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  margin: 13px;
+  width: 75px;
+  border-color: #000000;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.players {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 40px;
+  padding: 15px;
+}
+
+#buttons {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#game {
+  height: 100%;
+  display: none;
+}
+
+#canvas {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}

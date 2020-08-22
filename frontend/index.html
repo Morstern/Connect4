@@ -7,15 +7,37 @@
     <title>The HTML5 Herald</title>
     <meta name="description" content="The HTML5 Herald" />
     <meta name="author" content="SitePoint" />
-    <script type="text/javascript" src="scripts.js"></script>
+    <script type="text/javascript" src="./scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
   </head>
-  
+
   <body>
-    <textarea id="textField"></textarea>
-    <button onclick="sendCreatingMessage()">sendCreatingMessage</button>
-    <button onclick="sendJoiningMessage()">sendJoining</button>
-    <button onclick="sendMakingMoveMessage()">sendMakingMove</button>
-
-
+    <div class="container">
+      <div id="message">Connect 4</div>
+      <div class="content">
+        <div id="options">
+          <div class="nickname">
+            <input id="nickInput" placeholder="nick" />
+            <button onclick="saveNickname()">Save nickname</button>
+          </div>
+          <div class="room">
+            <input id="roomInput" placeholder="pokój" />
+            <button onclick="sendCreatingMessage()">Create room</button>
+            <button onclick="sendJoiningMessage()">Join room</button>
+          </div>
+        </div>
+        <div id="game">
+          <div class="players">
+            <p id="player_1" style="color: red;">...</p>
+            <button onclick="sendRemoveRoomMessage()">Exit</button>
+            <p id="player_2" style="color: blue;">...</p>
+          </div>
+          <div class="boxes">
+            <canvas width="800" height="600" id="canvas"></canvas>
+            <div id="buttons"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

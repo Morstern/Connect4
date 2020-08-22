@@ -12,7 +12,7 @@ function* addToBoard(board, column, playerIndex) {
     }
   }
   yield board;
-  yield { column: column, row: row };
+  yield { column: parseInt(column), row: parseInt(row) };
 }
 
 const rotateBoard = (board) => {
