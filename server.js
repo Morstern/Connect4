@@ -22,7 +22,7 @@ app.use(cors());
 app.use(express.static("../frontend/"));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../frontend/dist/index.html"));
+  res.sendFile(path.resolve(__dirname, "./frontend/index.html"));
 });
 
 const server = app.listen(port, () => {
